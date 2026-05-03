@@ -48,7 +48,7 @@
   </g>
 
   <g aria-label="MiloFlow wordmark">
-    <text x="380" y="188" fill="#CBF7EF" font-family="Avenir Next, Inter, SF Pro Display, Helvetica Neue, Arial, sans-serif" font-size="106" font-weight="800" letter-spacing="-1.5">Milo</text>
+    <text x="380" y="188" fill="#A7DCD4" font-family="Avenir Next, Inter, SF Pro Display, Helvetica Neue, Arial, sans-serif" font-size="106" font-weight="800" letter-spacing="-1.5">Milo</text>
     <text x="624" y="188" fill="#1AA196" font-family="Avenir Next, Inter, SF Pro Display, Helvetica Neue, Arial, sans-serif" font-size="106" font-weight="800" letter-spacing="-1.5">Flow</text>
     <path d="M386 225H872" stroke="#1E6B63" stroke-width="10" stroke-linecap="round"/>
     <path d="M624 225H872" stroke="#1AA196" stroke-width="10" stroke-linecap="butt"/>
