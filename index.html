@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MiloFlow - Private AI Voice Workspace</title>
+    <meta
+      name="description"
+      content="MiloFlow is a private AI voice workspace for Milo chat, journaling, discussions, projects, local Gemma, and Gemini Live with your own API key."
+    />
+    <meta name="theme-color" content="#1e6b63" />
+    <meta property="og:title" content="MiloFlow" />
+    <meta property="og:description" content="Private voice, thoughts, and work in motion." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/brand/app-icon-512.png" />
+    <link rel="icon" href="assets/brand/app-icon-512.png" />
+    <link rel="apple-touch-icon" href="assets/brand/app-icon-512.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="MiloFlow home">
+        <img src="assets/brand/miloflow-app-icon.svg" alt="" />
+        <span><span class="brand-milo">Milo</span><span class="brand-flow">Flow</span></span>
+      </a>
+      <nav>
+        <a href="#milo">Milo</a>
+        <a href="#workspaces">Workspaces</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-scene" aria-hidden="true">
+          <div class="phone">
+            <div class="phone-top">
+              <span class="dot"></span>
+              <span>Gemma ready</span>
+            </div>
+            <div class="chat-row assistant">Hi, it's Milo. What's on your mind?</div>
+            <div class="chat-row user">I need to think through the launch plan.</div>
+            <div class="chat-row assistant wide">
+              Let's make it simple: audience, offer, next action.
+            </div>
+            <div class="voice-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>Listening</strong>
+            </div>
+          </div>
+          <div class="workspace-stack">
+            <div class="workspace-card project">
+              <span>Project</span>
+              <strong>Launch checklist</strong>
+              <p>Requirements, action items, and summary stay together.</p>
+            </div>
+            <div class="workspace-card journal">
+              <span>Journal</span>
+              <strong>Voice reflection</strong>
+              <p>Daily entries become concise notes and next steps.</p>
+            </div>
+            <div class="workspace-card discussion">
+              <span>Discussion</span>
+              <strong>Meeting memory</strong>
+              <p>Transcript, summary, and follow-ups in one place.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Private AI voice workspace</p>
+          <h1 id="hero-title">MiloFlow</h1>
+          <p class="hero-subtitle">
+            Talk with Milo, capture thoughts, and turn conversations into organized work without giving up local-first control.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#pricing">See plans</a>
+            <a class="secondary-action" href="#privacy">How privacy works</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro band" id="milo" aria-labelledby="milo-title">
+        <div class="section-heading">
+          <p class="eyebrow">Always close</p>
+          <h2 id="milo-title">Milo is the home base.</h2>
+          <p>
+            Use the Milo bar for quick voice turns, or open the chat history when you want context. Incognito Milo is available when the conversation should disappear.
+          </p>
+        </div>
+        <div class="feature-grid two">
+          <article>
+            <span class="feature-icon">M</span>
+            <h3>Regular Milo</h3>
+            <p>Persistent chat, compact context, local-first history, optional vault recall, and voice or typed turns.</p>
+          </article>
+          <article>
+            <span class="feature-icon incognito">I</span>
+            <h3>Incognito Milo</h3>
+            <p>No SQLite save, no vault write, no compaction, no archive, and no reusable model branch.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band split" id="workspaces" aria-labelledby="workspaces-title">
+        <div class="section-heading">
+          <p class="eyebrow">For real work</p>
+          <h2 id="workspaces-title">Project, Journal, and Discussion each keep their own shape.</h2>
+          <p>
+            MiloFlow separates different kinds of thinking so notes do not become one long chat thread.
+          </p>
+        </div>
+        <div class="feature-grid three">
+          <article>
+            <span class="feature-icon project">P</span>
+            <h3>Projects</h3>
+            <p>Guided requirements, decisions, open questions, and action items for product work.</p>
+          </article>
+          <article>
+            <span class="feature-icon journal">J</span>
+            <h3>Journal</h3>
+            <p>Voice entries become daily reflections with summaries and personal follow-ups.</p>
+          </article>
+          <article>
+            <span class="feature-icon discussion">D</span>
+            <h3>Discussion</h3>
+            <p>Capture meetings or conversations with transcripts, summaries, and next actions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band providers" aria-labelledby="providers-title">
+        <div class="section-heading">
+          <p class="eyebrow">Two model paths</p>
+          <h2 id="providers-title">Choose local Gemma or Gemini Live.</h2>
+          <p>
+            Start local when privacy and cost matter. Bring your own Gemini API key when you want cloud live audio and Gemini text analysis.
+          </p>
+        </div>
+        <div class="provider-table" role="table" aria-label="MiloFlow provider comparison">
+          <div role="row" class="table-head">
+            <span role="columnheader">Path</span>
+            <span role="columnheader">Best for</span>
+            <span role="columnheader">Voice</span>
+            <span role="columnheader">Cost</span>
+          </div>
+          <div role="row">
+            <span role="cell">Gemma4-E2B local</span>
+            <span role="cell">Private Milo and offline-friendly turns</span>
+            <span role="cell">Apple Speech + PocketTTS or KittenTTS</span>
+            <span role="cell">No per-use API billing</span>
+          </div>
+          <div role="row">
+            <span role="cell">Gemini Live</span>
+            <span role="cell">Cloud realtime voice and multimodal turns</span>
+            <span role="cell">Native Gemini audio voices</span>
+            <span role="cell">User pays Google through BYO API</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="band privacy" id="privacy" aria-labelledby="privacy-title">
+        <div class="section-heading">
+          <p class="eyebrow">Local-first by design</p>
+          <h2 id="privacy-title">Your notes begin on your device.</h2>
+          <p>
+            MiloFlow stores source records in local SQLite. When you choose, it can mirror readable Markdown into an Obsidian vault.
+          </p>
+        </div>
+        <div class="privacy-flow" aria-label="Storage flow">
+          <div>SQLite</div>
+          <span></span>
+          <div>Compact context</div>
+          <span></span>
+          <div>Obsidian vault</div>
+        </div>
+      </section>
+
+      <section class="band pricing" id="pricing" aria-labelledby="pricing-title">
+        <div class="section-heading">
+          <p class="eyebrow">Simple plan direction</p>
+          <h2 id="pricing-title">Milo is free. Workspaces are Pro.</h2>
+        </div>
+        <div class="price-grid">
+          <article>
+            <h3>Free</h3>
+            <p class="price">$0</p>
+            <ul>
+              <li>Regular Milo</li>
+              <li>Incognito Milo</li>
+              <li>Local-first chat history</li>
+              <li>Typed and voice turns where available</li>
+            </ul>
+          </article>
+          <article class="highlight">
+            <h3>Pro</h3>
+            <p class="price">$4.99 <span>/ month target</span></p>
+            <ul>
+              <li>Project, Journal, and Discussion</li>
+              <li>Summary and analyze pages</li>
+              <li>Obsidian export and archive</li>
+              <li>Gemini Live support with BYO API key</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <img src="assets/brand/miloflow-logo.svg" alt="MiloFlow" />
+      <p>Private voice, thoughts, and work in motion.</p>
+    </footer>
+  </body>
+</html>
