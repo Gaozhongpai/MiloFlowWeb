@@ -3,12 +3,11 @@
   <desc id="desc">MiloFlow logo with a rounded teal app mark, a speech bubble, and a flowing voice path.</desc>
   <defs>
     <style>
-      .wordmark-milo { fill: #1e6b63; }
+      .wordmark-milo { fill: #A7DCD4; }
       .wordmark-flow { fill: #1AA196; }
-      .wordmark-milo-bar { stroke: #1e6b63; }
+      .wordmark-milo-bar { stroke: #A7DCD4; }
       .wordmark-flow-bar { stroke: #1AA196; }
       .wordmark-tagline { fill: #6D7E7E; }
-
     </style>
     <linearGradient id="markGradient" x1="52" y1="42" x2="302" y2="296" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#1E6B63"/>

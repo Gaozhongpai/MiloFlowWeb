@@ -16,6 +16,14 @@
     <meta property="og:image" content="assets/brand/app-icon-512.png" />
     <link rel="icon" href="assets/brand/app-icon-512.png" />
     <link rel="apple-touch-icon" href="assets/brand/app-icon-512.png" />
+    <script>
+      (() => {
+        const theme = localStorage.getItem("miloflow-theme");
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.dataset.theme = theme;
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -24,12 +32,18 @@
         <img src="assets/brand/miloflow-app-icon.svg" alt="" />
         <span><span class="brand-milo">Milo</span><span class="brand-flow">Flow</span></span>
       </a>
-      <nav>
-        <a href="#milo">Milo</a>
-        <a href="#workspaces">Workspaces</a>
-        <a href="#privacy">Privacy</a>
-        <a href="#pricing">Pricing</a>
-      </nav>
+      <div class="header-actions">
+        <nav>
+          <a href="#milo">Milo</a>
+          <a href="#workspaces">Workspaces</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#pricing">Pricing</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch theme" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true"></span>
+          <span class="theme-label">Night</span>
+        </button>
+      </div>
     </header>
 
     <main id="top">
@@ -234,8 +248,39 @@
     </main>
 
     <footer>
-      <img src="assets/brand/miloflow-logo.svg" alt="MiloFlow" />
+      <a class="footer-logo-link" href="#top" aria-label="MiloFlow home">
+        <img class="footer-logo footer-logo-day" src="assets/brand/miloflow-logo.svg" alt="MiloFlow" />
+        <img class="footer-logo footer-logo-night" src="assets/brand/miloflow-logo_night.svg" alt="MiloFlow" />
+      </a>
       <p>Private voice, thoughts, and work in motion.</p>
     </footer>
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const button = document.querySelector(".theme-toggle");
+        const label = button?.querySelector(".theme-label");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+        const activeTheme = () => root.dataset.theme || (systemDark.matches ? "dark" : "light");
+
+        const updateButton = () => {
+          const theme = activeTheme();
+          if (!button || !label) return;
+          button.setAttribute("aria-pressed", String(theme === "dark"));
+          button.setAttribute("aria-label", theme === "dark" ? "Switch to day mode" : "Switch to night mode");
+          label.textContent = theme === "dark" ? "Day" : "Night";
+        };
+
+        button?.addEventListener("click", () => {
+          const nextTheme = activeTheme() === "dark" ? "light" : "dark";
+          root.dataset.theme = nextTheme;
+          localStorage.setItem("miloflow-theme", nextTheme);
+          updateButton();
+        });
+
+        systemDark.addEventListener("change", updateButton);
+        updateButton();
+      })();
+    </script>
   </body>
 </html>
