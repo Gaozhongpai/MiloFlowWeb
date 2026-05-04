@@ -8,7 +8,8 @@
       name="description"
       content="MiloFlow is a private AI voice workspace for Milo chat, journaling, discussions, projects, local Gemma, and Gemini Live with your own API key."
     />
-    <meta name="theme-color" content="#1e6b63" />
+    <meta name="theme-color" content="#e3e8de" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1c1f21" media="(prefers-color-scheme: dark)" />
     <meta property="og:title" content="MiloFlow" />
     <meta property="og:description" content="Private voice, thoughts, and work in motion." />
     <meta property="og:type" content="website" />
@@ -38,6 +39,7 @@
             <div class="phone-top">
               <span class="dot"></span>
               <span>Gemma ready</span>
+              <span class="airplane" aria-hidden="true">✈</span>
             </div>
             <div class="chat-row assistant">Hi, it's Milo. What's on your mind?</div>
             <div class="chat-row user">I need to think through the launch plan.</div>
@@ -74,7 +76,7 @@
           <p class="eyebrow">Private AI voice workspace</p>
           <h1 id="hero-title">MiloFlow</h1>
           <p class="hero-subtitle">
-            Talk with Milo, capture thoughts, and turn conversations into organized work without giving up local-first control.
+            Talk with Milo, capture thoughts, and turn conversations into organized work. Local mode can keep going without internet, even in airplane mode.
           </p>
           <div class="hero-actions">
             <a class="primary-action" href="#pricing">See plans</a>
@@ -88,7 +90,7 @@
           <p class="eyebrow">Always close</p>
           <h2 id="milo-title">Milo is the home base.</h2>
           <p>
-            Use the Milo bar for quick voice turns, or open the chat history when you want context. Incognito Milo is available when the conversation should disappear.
+            Use the Milo bar for quick voice turns, or open the chat history when you want context. Milo can keep a local knowledge base for persistent memory, while Incognito Milo is available when the conversation should disappear.
           </p>
         </div>
         <div class="feature-grid two">
@@ -117,7 +119,7 @@
           <article>
             <span class="feature-icon project">P</span>
             <h3>Projects</h3>
-            <p>Guided requirements, decisions, open questions, and action items for product work.</p>
+            <p>Agentic planning helps capture requirements, decisions, open questions, and action items for product work.</p>
           </article>
           <article>
             <span class="feature-icon journal">J</span>
@@ -137,28 +139,50 @@
           <p class="eyebrow">Two model paths</p>
           <h2 id="providers-title">Choose private local mode or live cloud voice.</h2>
           <p>
-            Start local when privacy and cost matter. Bring your own API key when you want realtime cloud voice and stronger online analysis.
+            Start local when privacy, airplane-mode access, and cost matter. Bring your own API key when you want realtime cloud voice and stronger online analysis.
           </p>
         </div>
-        <div class="provider-table" role="table" aria-label="MiloFlow provider comparison">
-          <div role="row" class="table-head">
-            <span role="columnheader">Mode</span>
-            <span role="columnheader">Best for</span>
-            <span role="columnheader">Experience</span>
-            <span role="columnheader">Cost</span>
-          </div>
-          <div role="row">
-            <span role="cell" data-label="Mode">Private local</span>
-            <span role="cell" data-label="Best for">Personal Milo chats and everyday reflection</span>
-            <span role="cell" data-label="Experience">Voice and text run on your device when local assets are ready</span>
-            <span role="cell" data-label="Cost">No cloud usage bill</span>
-          </div>
-          <div role="row">
-            <span role="cell" data-label="Mode">Live cloud</span>
-            <span role="cell" data-label="Best for">Realtime voice, images, and heavier workspace analysis</span>
-            <span role="cell" data-label="Experience">More fluid live conversation with cloud AI</span>
-            <span role="cell" data-label="Cost">Uses your own API key</span>
-          </div>
+        <div class="provider-cards" aria-label="MiloFlow provider comparison">
+          <article class="provider-card local">
+            <div class="provider-title">
+              <span aria-hidden="true"></span>
+              <h3>Private local</h3>
+            </div>
+            <dl>
+              <div>
+                <dt>Best for</dt>
+                <dd>Personal Milo chats and everyday reflection</dd>
+              </div>
+              <div>
+                <dt>Experience</dt>
+                <dd>Voice and text run on your device when local assets are ready, including without internet</dd>
+              </div>
+              <div>
+                <dt>Cost</dt>
+                <dd>No cloud usage bill</dd>
+              </div>
+            </dl>
+          </article>
+          <article class="provider-card cloud">
+            <div class="provider-title">
+              <span aria-hidden="true"></span>
+              <h3>Live cloud</h3>
+            </div>
+            <dl>
+              <div>
+                <dt>Best for</dt>
+                <dd>Realtime voice, images, and heavier workspace analysis</dd>
+              </div>
+              <div>
+                <dt>Experience</dt>
+                <dd>More fluid live conversation with cloud AI</dd>
+              </div>
+              <div>
+                <dt>Cost</dt>
+                <dd>Uses your own API key</dd>
+              </div>
+            </dl>
+          </article>
         </div>
       </section>
 
@@ -167,7 +191,7 @@
           <p class="eyebrow">Local-first by design</p>
           <h2 id="privacy-title">Your notes begin on your device.</h2>
           <p>
-            MiloFlow stores source records in local SQLite. When you choose, it can mirror readable Markdown into an Obsidian vault.
+            MiloFlow stores source records in local SQLite and can build a local knowledge base for persistent memory. When you choose, it can mirror readable Markdown into an Obsidian vault.
           </p>
         </div>
         <div class="privacy-flow" aria-label="Storage flow">

@@ -1,17 +1,48 @@
 :root {
-  --ink: #f5f2e8;
-  --muted: #b9b5a8;
-  --dim: #7f7b70;
-  --surface: #242824;
-  --surface-2: #2f342f;
-  --line: rgba(245, 242, 232, 0.14);
+  color-scheme: light dark;
+  --ink: #1a2629;
+  --muted: #5f6e6f;
+  --dim: #879090;
+  --surface: #ffffff;
+  --surface-2: #eef3ed;
+  --line: rgba(26, 38, 41, 0.12);
+  --header-bg: rgba(227, 232, 222, 0.78);
+  --hero-fade: rgba(227, 232, 222, 0);
+  --band-alt: #edf2ea;
+  --hero-subtitle: #263436;
   --milo: #1e6b63;
+  --brand-milo: #1e6b63;
   --flow: #1aa196;
   --mint: #7bd3b6;
   --coral: #e96f50;
   --gold: #f2c66b;
   --violet: #9b8ef3;
-  --dark: #171916;
+  --page: #e3e8de;
+  --phone-surface: linear-gradient(160deg, #f8fbf7 0%, #edf3ec 100%);
+  --assistant-bubble: #eef4ee;
+  --user-bubble: #f6eee8;
+  --voice-surface: rgba(255, 255, 255, 0.72);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f5f2e8;
+    --muted: #b9b5a8;
+    --dim: #7f7b70;
+    --surface: #242824;
+    --surface-2: #2f342f;
+    --line: rgba(245, 242, 232, 0.14);
+    --header-bg: rgba(28, 31, 33, 0.78);
+    --hero-fade: rgba(28, 31, 33, 0);
+    --band-alt: #1f221f;
+    --hero-subtitle: #dfdccf;
+    --brand-milo: #a7dcd4;
+    --page: #1c1f21;
+    --phone-surface: linear-gradient(160deg, #20241f 0%, #30362f 100%);
+    --assistant-bubble: #383d37;
+    --user-bubble: #41372e;
+    --voice-surface: #1f2522;
+  }
 }
 
 * {
@@ -24,7 +55,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--dark);
+  background: var(--page);
   color: var(--ink);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -37,7 +68,7 @@ a {
 .site-header {
   align-items: center;
   backdrop-filter: blur(20px);
-  background: rgba(23, 25, 22, 0.78);
+  background: var(--header-bg);
   border-bottom: 1px solid var(--line);
   display: flex;
   height: 72px;
@@ -65,7 +96,7 @@ a {
 }
 
 .brand-milo {
-  color: #cbf7ef;
+  color: var(--brand-milo);
 }
 
 .brand-flow {
@@ -99,7 +130,7 @@ nav a:hover {
 }
 
 .hero::after {
-  background: linear-gradient(180deg, rgba(23, 25, 22, 0) 0%, var(--dark) 96%);
+  background: linear-gradient(180deg, var(--hero-fade) 0%, var(--page) 96%);
   bottom: 0;
   content: "";
   height: 26%;
@@ -118,7 +149,7 @@ nav a:hover {
 }
 
 .phone {
-  background: linear-gradient(160deg, #20241f 0%, #30362f 100%);
+  background: var(--phone-surface);
   border: 1px solid var(--line);
   border-radius: 42px;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.36);
@@ -140,6 +171,20 @@ nav a:hover {
   margin-bottom: 24px;
 }
 
+.airplane {
+  align-items: center;
+  background: rgba(123, 211, 182, 0.14);
+  border: 1px solid rgba(123, 211, 182, 0.24);
+  border-radius: 999px;
+  color: var(--flow);
+  display: inline-flex;
+  font-size: 13px;
+  height: 26px;
+  justify-content: center;
+  margin-left: auto;
+  width: 26px;
+}
+
 .dot {
   background: var(--mint);
   border-radius: 50%;
@@ -158,11 +203,11 @@ nav a:hover {
 }
 
 .chat-row.assistant {
-  background: #383d37;
+  background: var(--assistant-bubble);
 }
 
 .chat-row.user {
-  background: #41372e;
+  background: var(--user-bubble);
   margin-left: auto;
 }
 
@@ -172,7 +217,7 @@ nav a:hover {
 
 .voice-bar {
   align-items: center;
-  background: #1f2522;
+  background: var(--voice-surface);
   border: 1px solid rgba(123, 211, 182, 0.22);
   border-radius: 24px;
   display: flex;
@@ -286,7 +331,7 @@ h1 {
 }
 
 .hero-subtitle {
-  color: #dfdccf;
+  color: var(--hero-subtitle);
   font-size: 32px;
   font-weight: 650;
   line-height: 1.18;
@@ -499,41 +544,83 @@ article li {
 
 .providers,
 .pricing {
-  background: #1f221f;
+  background: var(--band-alt);
 }
 
-.provider-table {
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  margin-top: 36px;
-  overflow: hidden;
-}
-
-.provider-table > div {
+.provider-cards {
   display: grid;
-  grid-template-columns: 0.85fr 1.2fr 1.2fr 0.85fr;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 36px;
 }
 
-.provider-table span {
-  border-bottom: 1px solid var(--line);
+.provider-card {
+  background:
+    linear-gradient(145deg, rgba(123, 211, 182, 0.10), transparent 42%),
+    var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  display: grid;
+  gap: 22px;
+  padding: 26px;
+}
+
+.provider-card.cloud {
+  background:
+    linear-gradient(145deg, rgba(242, 198, 107, 0.12), transparent 42%),
+    var(--surface);
+}
+
+.provider-title {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+.provider-title span {
+  background: var(--mint);
+  border-radius: 999px;
+  box-shadow: 0 0 0 7px rgba(123, 211, 182, 0.12);
+  height: 12px;
+  width: 12px;
+}
+
+.provider-card.cloud .provider-title span {
+  background: var(--gold);
+  box-shadow: 0 0 0 7px rgba(242, 198, 107, 0.14);
+}
+
+.provider-title h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.provider-card dl {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+
+.provider-card dl div {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 5px;
+  padding-top: 14px;
+}
+
+.provider-card dt {
+  color: var(--flow);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.provider-card dd {
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.4;
-  padding: 18px;
-}
-
-.provider-table > div:last-child span {
-  border-bottom: 0;
-}
-
-.provider-table .table-head span {
-  background: var(--surface-2);
-  color: var(--ink);
-  font-weight: 800;
-}
-
-.provider-table [role="cell"]::before {
-  display: none;
+  font-size: 15px;
+  line-height: 1.45;
+  margin: 0;
 }
 
 .privacy-flow {
@@ -695,6 +782,7 @@ footer p {
 
   .feature-grid.two,
   .feature-grid.three,
+  .provider-cards,
   .price-grid {
     grid-template-columns: 1fr;
   }
@@ -723,61 +811,17 @@ footer p {
     transform: none;
   }
 
-  .provider-table > div {
-    background: var(--surface);
-    border-bottom: 1px solid var(--line);
-    display: block;
-    padding: 18px;
+  .provider-card {
+    border-radius: 22px;
+    padding: 22px;
   }
 
-  .provider-table .table-head {
-    display: none;
+  .provider-title h3 {
+    font-size: 22px;
   }
 
-  .provider-table > div:last-child {
-    border-bottom: 0;
-  }
-
-  .provider-table span {
-    border-bottom: 0;
-    display: block;
-    padding: 0;
-  }
-
-  .provider-table [role="cell"] {
-    color: var(--muted);
+  .provider-card dd {
     font-size: 14px;
-    padding-left: 92px;
-    position: relative;
-  }
-
-  .provider-table [role="cell"] + [role="cell"] {
-    margin-top: 12px;
-  }
-
-  .provider-table [role="cell"]::before {
-    color: var(--mint);
-    content: attr(data-label);
-    display: block;
-    font-size: 11px;
-    font-weight: 850;
-    left: 0;
-    letter-spacing: 0.06em;
-    position: absolute;
-    text-transform: uppercase;
-    top: 1px;
-    width: 76px;
-  }
-
-  .provider-table [role="cell"]:first-child {
-    color: var(--ink);
-    font-size: 18px;
-    font-weight: 850;
-    padding-left: 0;
-  }
-
-  .provider-table [role="cell"]:first-child::before {
-    display: none;
   }
 
   .privacy-flow {
