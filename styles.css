@@ -532,6 +532,10 @@ article li {
   font-weight: 800;
 }
 
+.provider-table [role="cell"]::before {
+  display: none;
+}
+
 .privacy-flow {
   align-items: center;
   display: grid;
@@ -720,11 +724,60 @@ footer p {
   }
 
   .provider-table > div {
-    grid-template-columns: 1fr;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    display: block;
+    padding: 18px;
+  }
+
+  .provider-table .table-head {
+    display: none;
+  }
+
+  .provider-table > div:last-child {
+    border-bottom: 0;
   }
 
   .provider-table span {
-    border-bottom: 1px solid var(--line);
+    border-bottom: 0;
+    display: block;
+    padding: 0;
+  }
+
+  .provider-table [role="cell"] {
+    color: var(--muted);
+    font-size: 14px;
+    padding-left: 92px;
+    position: relative;
+  }
+
+  .provider-table [role="cell"] + [role="cell"] {
+    margin-top: 12px;
+  }
+
+  .provider-table [role="cell"]::before {
+    color: var(--mint);
+    content: attr(data-label);
+    display: block;
+    font-size: 11px;
+    font-weight: 850;
+    left: 0;
+    letter-spacing: 0.06em;
+    position: absolute;
+    text-transform: uppercase;
+    top: 1px;
+    width: 76px;
+  }
+
+  .provider-table [role="cell"]:first-child {
+    color: var(--ink);
+    font-size: 18px;
+    font-weight: 850;
+    padding-left: 0;
+  }
+
+  .provider-table [role="cell"]:first-child::before {
+    display: none;
   }
 
   .privacy-flow {
