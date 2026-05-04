@@ -17,10 +17,15 @@
     <link rel="icon" href="assets/brand/app-icon-512.png" />
     <link rel="apple-touch-icon" href="assets/brand/app-icon-512.png" />
     <script>
-      (() => {
-        const theme = localStorage.getItem("miloflow-theme");
+      (function () {
+        var theme = null;
+        try {
+          theme = window.localStorage.getItem("miloflow-theme");
+        } catch (error) {
+          theme = null;
+        }
         if (theme === "light" || theme === "dark") {
-          document.documentElement.dataset.theme = theme;
+          document.documentElement.setAttribute("data-theme", theme);
         }
       })();
     </script>
@@ -255,30 +260,54 @@
       <p>Private voice, thoughts, and work in motion.</p>
     </footer>
     <script>
-      (() => {
-        const root = document.documentElement;
-        const button = document.querySelector(".theme-toggle");
-        const label = button?.querySelector(".theme-label");
-        const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+      (function () {
+        var root = document.documentElement;
+        var button = document.querySelector(".theme-toggle");
+        var label = button ? button.querySelector(".theme-label") : null;
+        var systemDark = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
 
-        const activeTheme = () => root.dataset.theme || (systemDark.matches ? "dark" : "light");
+        function activeTheme() {
+          var forcedTheme = root.getAttribute("data-theme");
+          if (forcedTheme === "light" || forcedTheme === "dark") {
+            return forcedTheme;
+          }
+          return systemDark && systemDark.matches ? "dark" : "light";
+        }
 
-        const updateButton = () => {
-          const theme = activeTheme();
+        function saveTheme(theme) {
+          try {
+            window.localStorage.setItem("miloflow-theme", theme);
+          } catch (error) {
+            return;
+          }
+        }
+
+        function updateButton() {
+          var theme = activeTheme();
           if (!button || !label) return;
           button.setAttribute("aria-pressed", String(theme === "dark"));
           button.setAttribute("aria-label", theme === "dark" ? "Switch to day mode" : "Switch to night mode");
           label.textContent = theme === "dark" ? "Day" : "Night";
-        };
+        }
 
-        button?.addEventListener("click", () => {
-          const nextTheme = activeTheme() === "dark" ? "light" : "dark";
-          root.dataset.theme = nextTheme;
-          localStorage.setItem("miloflow-theme", nextTheme);
+        if (!button) return;
+
+        button.addEventListener("click", function (event) {
+          event.preventDefault();
+          var nextTheme = activeTheme() === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", nextTheme);
+          saveTheme(nextTheme);
           updateButton();
-        });
+        }, false);
 
-        systemDark.addEventListener("change", updateButton);
+        if (systemDark) {
+          if (systemDark.addEventListener) {
+            systemDark.addEventListener("change", updateButton);
+          } else if (systemDark.addListener) {
+            systemDark.addListener(updateButton);
+          }
+        }
+
         updateButton();
       })();
     </script>

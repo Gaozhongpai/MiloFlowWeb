@@ -225,6 +225,8 @@ nav a:hover {
   gap: 8px;
   min-height: 38px;
   padding: 0 13px 0 10px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .theme-toggle:hover {
@@ -833,15 +835,15 @@ footer p {
   align-items: center;
   display: inline-flex;
   flex-shrink: 0;
-  font-size: 28px;
-  font-weight: 850;
-  gap: 12px;
+  font-size: 22px;
+  font-weight: 800;
+  gap: 11px;
 }
 
 .footer-brand img {
-  border-radius: 14px;
-  height: 44px;
-  width: 44px;
+  border-radius: 12px;
+  height: 38px;
+  width: 38px;
 }
 
 @media (max-width: 1180px) {
