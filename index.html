@@ -45,6 +45,7 @@
           <a href="#memory">Memory</a>
           <a href="#pricing">Pricing</a>
         </nav>
+        <a class="header-cta" href="mailto:support@miloflow.ai?subject=MiloFlow%20TestFlight">Request TestFlight</a>
         <button class="theme-toggle" type="button" aria-label="Switch theme" aria-pressed="false">
           <span class="theme-icon" aria-hidden="true"></span>
           <span class="theme-label">Night</span>
@@ -70,7 +71,7 @@
               <span></span>
               <span></span>
               <span></span>
-              <strong>Live voice</strong>
+              <strong>Gemini Live</strong>
             </div>
           </div>
           <div class="workspace-stack">
@@ -99,8 +100,14 @@
             Talk with Milo, remember what matters, and turn conversations into organized work. Use Local Gemma on device, Gemini Cloud with your own API key, or Gemini Live for realtime voice.
           </p>
           <div class="hero-actions">
-            <a class="primary-action" href="#pricing">See plans</a>
+            <a class="primary-action" href="mailto:support@miloflow.ai?subject=MiloFlow%20TestFlight">Request TestFlight</a>
             <a class="secondary-action" href="#memory">How memory works</a>
+          </div>
+          <p class="availability-note">iPhone-first. Gemini Cloud and Gemini Live use your own Google AI Studio API key.</p>
+          <div class="signal-strip" aria-label="MiloFlow launch highlights">
+            <span>Local-first memory</span>
+            <span>Visible tool receipts</span>
+            <span>Watch remote</span>
           </div>
         </div>
       </section>
@@ -122,8 +129,30 @@
           <article>
             <span class="feature-icon incognito">I</span>
             <h3>Incognito Milo</h3>
-            <p>No SQLite save, no vault write, no compaction, no archive, and no reusable model branch.</p>
+            <p>Nothing is saved, no memory is used, and the conversation does not carry into future turns.</p>
           </article>
+        </div>
+        <div class="memory-console" aria-label="Memory flow">
+          <div>
+            <span>01</span>
+            <strong>Vault</strong>
+            <p>Markdown notes stay inspectable.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Local index</strong>
+            <p>Changed files refresh on device.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Retrieval gate</strong>
+            <p>Only relevant snippets enter the turn.</p>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>Milo</strong>
+            <p>The chosen model receives app-curated context.</p>
+          </div>
         </div>
       </section>
 
@@ -150,6 +179,61 @@
             <span class="feature-icon discussion">D</span>
             <h3>Discussion</h3>
             <p>Capture meetings or conversations with transcripts, summaries, and next actions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band proof" aria-labelledby="proof-title">
+        <div class="section-heading">
+          <p class="eyebrow">App surfaces</p>
+          <h2 id="proof-title">Built around visible voice turns.</h2>
+          <p>
+            MiloFlow keeps voice, tools, memory, and workspaces visible so you can see what happened and change course quickly.
+          </p>
+        </div>
+        <div class="surface-grid" aria-label="MiloFlow app surface examples">
+          <article class="surface-card chat-surface">
+            <div class="surface-top">
+              <span>Milo Chat</span>
+              <strong>Gemini Live</strong>
+            </div>
+            <div class="bubble assistant assistant-message">
+              <div class="tool-receipt">
+                <span aria-hidden="true">✓</span>
+                <strong>Searched notes · 1 result</strong>
+              </div>
+              <p>I found the current notes and saved a reminder for tomorrow.</p>
+            </div>
+            <p class="bubble user">Add that to my launch project too.</p>
+          </article>
+          <article class="surface-card memory-surface">
+            <div class="surface-top">
+              <span>Knowledge Base</span>
+              <strong>Local index</strong>
+            </div>
+            <div class="settings-row ok">
+              <span>Vault Search</span>
+              <b>Ready</b>
+            </div>
+            <div class="settings-row">
+              <span>Gemini Embeddings</span>
+              <b>Optional</b>
+            </div>
+            <div class="settings-row">
+              <span>Memory Index</span>
+              <b>43 notes</b>
+            </div>
+          </article>
+          <article class="surface-card watch-surface">
+            <div class="surface-top">
+              <span>Apple Watch</span>
+              <strong>Live remote</strong>
+            </div>
+            <div class="watch-face">
+              <span></span>
+              <strong>Milo</strong>
+              <p>Talk from your watch while iPhone handles tools, memory, and history.</p>
+            </div>
           </article>
         </div>
       </section>
@@ -253,7 +337,7 @@
           <article>
             <span class="feature-icon incognito">I</span>
             <h3>Incognito boundary</h3>
-            <p>Incognito skips persistence, vault sync, memory recall, archive, and reusable provider state.</p>
+            <p>Incognito skips saved history, vault sync, memory, archives, and carry-over context.</p>
           </article>
         </div>
       </section>
@@ -277,7 +361,7 @@
 
       <section class="band pricing" id="pricing" aria-labelledby="pricing-title">
         <div class="section-heading">
-          <p class="eyebrow">Simple plan direction</p>
+          <p class="eyebrow">Simple plans</p>
           <h2 id="pricing-title">Milo is free. Workspaces are Pro.</h2>
           <p>
             MiloFlow charges for app features, not bundled cloud usage. Gemini Cloud, Gemini Live, and optional Gemini embeddings use your own Google API key.
@@ -297,17 +381,18 @@
           </article>
           <article class="highlight">
             <h3>Pro</h3>
-            <p class="price">$4.99 <span>/ month target</span></p>
+            <p class="price">$4.99 <span>/ month</span></p>
             <ul>
               <li>Project, Journal, and Discussion</li>
               <li>Gemini Live realtime voice</li>
-              <li>Apple Watch Gemini Live remote</li>
+              <li>Talk to Milo from your Apple Watch</li>
               <li>Workspace summaries, analysis, and action items</li>
               <li>Workspace export and backfill</li>
               <li>Advanced live memory and tool workflows</li>
             </ul>
           </article>
         </div>
+        <p class="pricing-note">Pricing may vary by App Store region. Cloud model usage is billed by Google through the API key you provide.</p>
       </section>
     </main>
 
@@ -316,6 +401,11 @@
         <img src="assets/brand/miloflow-app-icon.svg" alt="" />
         <span><span class="brand-milo">Milo</span><span class="brand-flow">Flow</span></span>
       </a>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:support@miloflow.ai">Contact</a>
+      </div>
       <p>Private voice, memory, and work in motion.</p>
     </footer>
     <script>

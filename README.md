@@ -8,6 +8,8 @@ Gemini embeddings, and local-first storage.
 ## Files
 
 - `index.html` - landing page
+- `privacy.html` - privacy notes for App Store/support links
+- `support.html` - support and troubleshooting contact page
 - `styles.css` - responsive site styling
 - `404.html` - GitHub Pages fallback page
 - `assets/brand/` - copied MiloFlow logo and app icon assets

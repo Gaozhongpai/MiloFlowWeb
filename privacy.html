@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MiloFlow Privacy</title>
+    <meta
+      name="description"
+      content="Privacy notes for MiloFlow, including local storage, optional cloud model use, vault memory, and incognito boundaries."
+    />
+    <link rel="icon" href="assets/brand/app-icon-512.png" />
+    <link rel="apple-touch-icon" href="assets/brand/app-icon-512.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="MiloFlow home">
+        <img src="assets/brand/miloflow-app-icon.svg" alt="" />
+        <span><span class="brand-milo">Milo</span><span class="brand-flow">Flow</span></span>
+      </a>
+      <div class="header-actions">
+        <nav>
+          <a href="/">Home</a>
+          <a href="support.html">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="legal-page">
+      <section class="band">
+        <p class="eyebrow">Privacy</p>
+        <h1>Privacy Policy</h1>
+        <p class="hero-subtitle">
+          MiloFlow is designed around local-first storage, explicit cloud use, and visible memory controls.
+        </p>
+        <p class="legal-updated">Last updated: May 18, 2026</p>
+
+        <div class="legal-grid">
+          <article>
+            <h2>Local storage</h2>
+            <p>
+              MiloFlow stores app records on your device, including chat history, workspace records,
+              reminders, settings, and local memory index data. If you connect a Markdown vault,
+              MiloFlow can write readable Markdown files to that selected folder.
+            </p>
+          </article>
+          <article>
+            <h2>Cloud model use</h2>
+            <p>
+              Gemini Cloud, Gemini Live, and optional Gemini embeddings use a Google AI Studio API key
+              that you provide. Requests may include prompts, transcripts, images, tool context, vault
+              snippets, and search queries needed for the feature you use.
+            </p>
+          </article>
+          <article>
+            <h2>AI Memory</h2>
+            <p>
+              Local vault search uses an index on your device. Gemini embeddings are optional and send
+              relevant snippets and queries to Google for stronger recall. You can delete the local
+              memory index or forget the selected vault folder from settings.
+            </p>
+          </article>
+          <article>
+            <h2>Incognito</h2>
+            <p>
+              Incognito Milo is intended for non-persistent conversations. It skips saved history,
+              vault sync, memory recall, archives, and carry-over context.
+            </p>
+          </article>
+          <article>
+            <h2>Apple services</h2>
+            <p>
+              MiloFlow can use Apple Speech, local audio playback, Apple Reminders, WatchConnectivity,
+              and system diagnostics when you enable related features or grant permissions.
+            </p>
+          </article>
+          <article>
+            <h2>Contact</h2>
+            <p>
+              Questions or deletion requests can be sent to
+              <a href="mailto:support@miloflow.ai">support@miloflow.ai</a>.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="footer-brand" href="/" aria-label="MiloFlow home">
+        <img src="assets/brand/miloflow-app-icon.svg" alt="" />
+        <span><span class="brand-milo">Milo</span><span class="brand-flow">Flow</span></span>
+      </a>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:support@miloflow.ai">Contact</a>
+      </div>
+    </footer>
+  </body>
+</html>
