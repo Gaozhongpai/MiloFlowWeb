@@ -637,7 +637,7 @@ h1 {
   z-index: 1;
 }
 
-.liquid-milo article {
+.liquid-milo .feature-grid article {
   backdrop-filter: blur(28px) saturate(1.35);
   background: var(--liquid-card-bg);
   border-color: var(--liquid-card-border);
@@ -648,7 +648,7 @@ h1 {
   position: relative;
 }
 
-.liquid-milo .feature-icon {
+.liquid-milo .feature-grid .feature-icon {
   background:
     radial-gradient(circle at 32% 25%, rgba(255, 255, 255, 0.42), transparent 32%),
     linear-gradient(135deg, rgba(203, 247, 239, 0.32), rgba(26, 161, 150, 0.22));
@@ -666,13 +666,13 @@ h1 {
   width: 64px;
 }
 
-.liquid-milo .feature-icon.incognito {
+.liquid-milo .feature-grid .feature-icon.incognito {
   background:
     radial-gradient(circle at 32% 25%, rgba(255, 255, 255, 0.36), transparent 32%),
     linear-gradient(135deg, rgba(233, 111, 80, 0.30), rgba(123, 211, 182, 0.16));
 }
 
-.liquid-milo article h3 {
+.liquid-milo .feature-grid article h3 {
   margin-top: 0;
 }
 
@@ -766,9 +766,13 @@ article li {
 
 .providers,
 .knowledge,
-.proof,
 .pricing {
   background: var(--band-alt);
+}
+
+.liquid-milo .surface-grid {
+  position: relative;
+  z-index: 1;
 }
 
 .surface-grid {
@@ -1026,29 +1030,6 @@ article li {
   font-size: 15px;
   line-height: 1.45;
   margin: 0;
-}
-
-.privacy-flow {
-  align-items: center;
-  display: grid;
-  gap: 18px;
-  grid-template-columns: 1fr 64px 1fr 64px 1fr;
-  margin-top: 40px;
-}
-
-.privacy-flow div {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  font-size: 20px;
-  font-weight: 800;
-  padding: 28px;
-  text-align: center;
-}
-
-.privacy-flow span {
-  background: var(--mint);
-  height: 2px;
 }
 
 .memory-console {
@@ -1346,13 +1327,13 @@ footer p {
     padding: 28px 24px;
   }
 
-  .liquid-milo article {
+  .liquid-milo .feature-grid article {
     border-radius: 34px;
     min-height: 0;
     padding: 24px;
   }
 
-  .liquid-milo .feature-icon {
+  .liquid-milo .feature-grid .feature-icon {
     left: auto;
     margin-bottom: 18px;
     position: relative;
@@ -1371,16 +1352,6 @@ footer p {
 
   .provider-card dd {
     font-size: 14px;
-  }
-
-  .privacy-flow {
-    grid-template-columns: 1fr;
-  }
-
-  .privacy-flow span {
-    height: 28px;
-    justify-self: center;
-    width: 2px;
   }
 
   .memory-console {

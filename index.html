@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MiloFlow - Private AI Voice Workspace</title>
+    <title>MiloFlow - Private AI Agent for iPhone</title>
     <meta
       name="description"
-      content="MiloFlow is a private iOS voice workspace for Milo chat, local-first memory, reminders, projects, journaling, Gemini Cloud, Gemini Live, and on-device Gemma."
+      content="MiloFlow is a private AI agent for everyday life, on iPhone. Talk, search, remember, and organize work with Local Gemma, Gemini Cloud, or Gemini Live."
     />
     <meta name="theme-color" content="#e3e8de" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#1c1f21" media="(prefers-color-scheme: dark)" />
     <meta property="og:title" content="MiloFlow" />
-    <meta property="og:description" content="Talk with Milo, keep local-first memory, and turn conversations into organized work." />
+    <meta property="og:description" content="A private AI agent for everyday life, on iPhone." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/brand/app-icon-512.png" />
     <link rel="icon" href="assets/brand/app-icon-512.png" />
@@ -40,7 +40,6 @@
       <div class="header-actions">
         <nav>
           <a href="#milo">Milo</a>
-          <a href="#workspaces">Workspaces</a>
           <a href="#models">Models</a>
           <a href="#memory">Memory</a>
           <a href="#pricing">Pricing</a>
@@ -59,8 +58,8 @@
           <div class="phone">
             <div class="phone-top">
               <span class="dot"></span>
-              <span>Gemini Live ready</span>
-              <span class="airplane" aria-hidden="true">●</span>
+              <span>Local Gemma ready</span>
+              <span class="airplane" aria-label="Airplane mode">✈</span>
             </div>
             <div class="chat-row assistant">Good morning. Want to talk, search, or capture something?</div>
             <div class="chat-row user">Search today's Boston news and remind me to follow up.</div>
@@ -77,7 +76,7 @@
           <div class="workspace-stack">
             <div class="workspace-card project">
               <span>Project</span>
-              <strong>Launch plan</strong>
+              <strong>Home project</strong>
               <p>Requirements, action items, and decisions stay together.</p>
             </div>
             <div class="workspace-card journal">
@@ -94,16 +93,16 @@
         </div>
 
         <div class="hero-copy">
-          <p class="eyebrow">Private iOS voice workspace</p>
+          <p class="eyebrow">Private iPhone AI agent</p>
           <h1 id="hero-title">MiloFlow</h1>
           <p class="hero-subtitle">
-            Talk with Milo, remember what matters, and turn conversations into organized work. Use Local Gemma on device, Gemini Cloud with your own API key, or Gemini Live for realtime voice.
+            A private AI agent for everyday life, on iPhone. Talk, search, remember, and organize work with Local Gemma, Gemini Cloud, or Gemini Live.
           </p>
           <div class="hero-actions">
             <a class="primary-action" href="mailto:support@miloflow.ai?subject=MiloFlow%20TestFlight">Request TestFlight</a>
             <a class="secondary-action" href="#memory">How memory works</a>
           </div>
-          <p class="availability-note">iPhone-first. Gemini Cloud and Gemini Live use your own Google AI Studio API key.</p>
+          <p class="availability-note">iPhone-first. Cloud modes use your own Google API key.</p>
           <div class="signal-strip" aria-label="MiloFlow launch highlights">
             <span>Local-first memory</span>
             <span>Visible tool receipts</span>
@@ -114,82 +113,33 @@
 
       <section class="intro band liquid-milo" id="milo" aria-labelledby="milo-title">
         <div class="section-heading">
-          <p class="eyebrow">Always close</p>
-          <h2 id="milo-title">Milo is the home base.</h2>
+          <p class="eyebrow">What Milo does</p>
+          <h2 id="milo-title">Talk, search, remember, and act.</h2>
           <p>
-            Use the Milo bar for quick voice turns, or open chat when you want the full history. Milo can search local memory, create reminders, and keep context without turning every thought into a workspace.
+            Milo is a home base for quick voice turns, memory, reminders, and organized work.
           </p>
         </div>
-        <div class="feature-grid two">
+        <div class="feature-grid four">
           <article>
             <span class="feature-icon">M</span>
-            <h3>Regular Milo</h3>
-            <p>Persistent chat, compact context, local-first history, optional vault recall, reminders, and voice or typed turns.</p>
+            <h3>Talk with Milo</h3>
+            <p>Voice or type when you need a quick thought partner.</p>
+          </article>
+          <article>
+            <span class="feature-icon project">S</span>
+            <h3>Search and act</h3>
+            <p>Ask for current facts, save reminders, and keep the result visible.</p>
+          </article>
+          <article>
+            <span class="feature-icon journal">W</span>
+            <h3>Workspaces</h3>
+            <p>Projects, Journal, and Discussion keep bigger thoughts organized.</p>
           </article>
           <article>
             <span class="feature-icon incognito">I</span>
-            <h3>Incognito Milo</h3>
-            <p>Nothing is saved, no memory is used, and the conversation does not carry into future turns.</p>
+            <h3>Incognito</h3>
+            <p>Nothing is saved, and no memory carries over.</p>
           </article>
-        </div>
-        <div class="memory-console" aria-label="Memory flow">
-          <div>
-            <span>01</span>
-            <strong>Vault</strong>
-            <p>Markdown notes stay inspectable.</p>
-          </div>
-          <div>
-            <span>02</span>
-            <strong>Local index</strong>
-            <p>Changed files refresh on device.</p>
-          </div>
-          <div>
-            <span>03</span>
-            <strong>Retrieval gate</strong>
-            <p>Only relevant snippets enter the turn.</p>
-          </div>
-          <div>
-            <span>04</span>
-            <strong>Milo</strong>
-            <p>The chosen model receives app-curated context.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="band split" id="workspaces" aria-labelledby="workspaces-title">
-        <div class="section-heading">
-          <p class="eyebrow">For real work</p>
-          <h2 id="workspaces-title">Project, Journal, and Discussion each keep their own shape.</h2>
-          <p>
-            Pro workspaces separate different kinds of thinking so notes do not become one long chat thread.
-          </p>
-        </div>
-        <div class="feature-grid three">
-          <article>
-            <span class="feature-icon project">P</span>
-            <h3>Projects</h3>
-            <p>Capture requirements, decisions, open questions, and action items for product work.</p>
-          </article>
-          <article>
-            <span class="feature-icon journal">J</span>
-            <h3>Journal</h3>
-            <p>Voice entries become daily reflections with summaries and personal follow-ups.</p>
-          </article>
-          <article>
-            <span class="feature-icon discussion">D</span>
-            <h3>Discussion</h3>
-            <p>Capture meetings or conversations with transcripts, summaries, and next actions.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="band proof" aria-labelledby="proof-title">
-        <div class="section-heading">
-          <p class="eyebrow">App surfaces</p>
-          <h2 id="proof-title">Built around visible voice turns.</h2>
-          <p>
-            MiloFlow keeps voice, tools, memory, and workspaces visible so you can see what happened and change course quickly.
-          </p>
         </div>
         <div class="surface-grid" aria-label="MiloFlow app surface examples">
           <article class="surface-card chat-surface">
@@ -204,12 +154,12 @@
               </div>
               <p>I found the current notes and saved a reminder for tomorrow.</p>
             </div>
-            <p class="bubble user">Add that to my launch project too.</p>
+            <p class="bubble user">Add that to my home project too.</p>
           </article>
           <article class="surface-card memory-surface">
             <div class="surface-top">
               <span>Knowledge Base</span>
-              <strong>Local index</strong>
+              <strong>On-device search</strong>
             </div>
             <div class="settings-row ok">
               <span>Vault Search</span>
@@ -241,9 +191,9 @@
       <section class="band providers" id="models" aria-labelledby="providers-title">
         <div class="section-heading">
           <p class="eyebrow">Three model modes</p>
-          <h2 id="providers-title">Choose local, cloud text, or realtime voice.</h2>
+          <h2 id="providers-title">Choose on-device, cloud, or live voice.</h2>
           <p>
-            MiloFlow keeps the app surface consistent while the runtime changes underneath. Cloud usage is bring-your-own Google AI Studio API key.
+            Pick the model that fits the moment. Each mode supports typing and voice, with different speed, privacy, and cost tradeoffs.
           </p>
         </div>
         <div class="provider-cards" aria-label="MiloFlow provider comparison">
@@ -255,11 +205,11 @@
             <dl>
               <div>
                 <dt>Best for</dt>
-                <dd>Offline/private Milo chat and everyday reflection</dd>
+                <dd>Private chat and everyday reflection</dd>
               </div>
               <div>
                 <dt>Experience</dt>
-                <dd>Apple Speech input, on-device generation, and local voice playback when assets are ready</dd>
+                <dd>Runs on device when local assets are ready</dd>
               </div>
               <div>
                 <dt>Cost</dt>
@@ -275,11 +225,11 @@
             <dl>
               <div>
                 <dt>Best for</dt>
-                <dd>Lower-cost cloud text with a local-voice feel</dd>
+                <dd>Everyday cloud chat with typed or spoken turns</dd>
               </div>
               <div>
                 <dt>Experience</dt>
-                <dd>Apple Speech transcript, Gemini text response, local voice playback</dd>
+                <dd>Milo listens, Gemini answers, and Milo speaks back</dd>
               </div>
               <div>
                 <dt>Cost</dt>
@@ -295,11 +245,11 @@
             <dl>
               <div>
                 <dt>Best for</dt>
-                <dd>Fast realtime voice, barge-in, watch remote, and richer tool turns</dd>
+                <dd>Fast voice, interruptions, watch remote, and richer tools</dd>
               </div>
               <div>
                 <dt>Experience</dt>
-                <dd>Native cloud audio over a live WebSocket, with transcripts and tool receipts in Milo</dd>
+                <dd>Realtime audio with visible transcripts and tool receipts</dd>
               </div>
               <div>
                 <dt>Access</dt>
@@ -312,50 +262,55 @@
 
       <section class="band knowledge" id="memory" aria-labelledby="memory-title">
         <div class="section-heading">
-          <p class="eyebrow">Memory you can inspect</p>
-          <h2 id="memory-title">AI Memory is app-owned, not model-owned.</h2>
+          <p class="eyebrow">Memory & privacy</p>
+          <h2 id="memory-title">Your notes stay under your control.</h2>
           <p>
-            MiloFlow retrieves memory before the model answers. That keeps Local Gemma, Gemini Cloud, and Gemini Live using the same reviewable memory rules.
+            Milo chooses relevant notes before the model answers. You decide when memory, vault sync, or smarter recall are enabled.
           </p>
         </div>
         <div class="feature-grid four">
           <article>
             <span class="feature-icon">L</span>
-            <h3>Local index</h3>
-            <p>Search your selected Markdown vault with a local index that stays on this device.</p>
+            <h3>On-device search</h3>
+            <p>Search your selected Markdown vault on this device.</p>
           </article>
           <article>
             <span class="feature-icon project">G</span>
-            <h3>Optional embeddings</h3>
-            <p>Gemini embeddings can improve recall, but only after you opt in with your own API key.</p>
+            <h3>Optional smarter recall</h3>
+            <p>Use Gemini to improve recall only when you opt in.</p>
           </article>
           <article>
             <span class="feature-icon journal">V</span>
             <h3>Vault controls</h3>
-            <p>Backfill readable Markdown, refresh changed files, delete the local index, or forget the folder.</p>
+            <p>Refresh notes, delete the index, or forget the folder.</p>
           </article>
           <article>
             <span class="feature-icon incognito">I</span>
             <h3>Incognito boundary</h3>
-            <p>Incognito skips saved history, vault sync, memory, archives, and carry-over context.</p>
+            <p>Nothing is saved, and no memory carries over.</p>
           </article>
         </div>
-      </section>
-
-      <section class="band privacy" id="privacy" aria-labelledby="privacy-title">
-        <div class="section-heading">
-          <p class="eyebrow">Local-first by design</p>
-          <h2 id="privacy-title">Your notes begin on your device.</h2>
-          <p>
-            MiloFlow stores source records in local SQLite. When you choose, it can mirror readable Markdown into an Obsidian vault and build a local search index for memory.
-          </p>
-        </div>
-        <div class="privacy-flow" aria-label="Storage flow">
-          <div>SQLite</div>
-          <span></span>
-          <div>Local memory index</div>
-          <span></span>
-          <div>Markdown vault</div>
+        <div class="memory-console" aria-label="Memory flow">
+          <div>
+            <span>01</span>
+            <strong>Vault</strong>
+            <p>Markdown notes stay inspectable.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Local index</strong>
+            <p>Changed files refresh quietly.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Relevant notes</strong>
+            <p>Only what matters enters the turn.</p>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>Milo</strong>
+            <p>The chosen model gets only the needed notes.</p>
+          </div>
         </div>
       </section>
 
@@ -364,7 +319,7 @@
           <p class="eyebrow">Simple plans</p>
           <h2 id="pricing-title">Milo is free. Workspaces are Pro.</h2>
           <p>
-            MiloFlow charges for app features, not bundled cloud usage. Gemini Cloud, Gemini Live, and optional Gemini embeddings use your own Google API key.
+            MiloFlow charges for app features, not bundled cloud usage.
           </p>
         </div>
         <div class="price-grid">
@@ -386,9 +341,9 @@
               <li>Project, Journal, and Discussion</li>
               <li>Gemini Live realtime voice</li>
               <li>Talk to Milo from your Apple Watch</li>
-              <li>Workspace summaries, analysis, and action items</li>
-              <li>Workspace export and backfill</li>
-              <li>Advanced live memory and tool workflows</li>
+              <li>Workspace summaries and action items</li>
+              <li>Workspace export</li>
+              <li>Advanced live memory and tools</li>
             </ul>
           </article>
         </div>
