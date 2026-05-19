@@ -1,6 +1,9 @@
 # MiloFlow Website
 
-Static landing page for MiloFlow, ready for GitHub Pages.
+Static landing page for MiloFlow, ready for GitHub Pages. The page mirrors the
+current app positioning: free Milo chat, Local Gemma, Gemini Cloud with a
+bring-your-own API key, Pro Gemini Live/workspaces, local vault memory, optional
+Gemini embeddings, and local-first storage.
 
 ## Files
 

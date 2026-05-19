@@ -618,6 +618,10 @@ h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.feature-grid.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 article {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -670,6 +674,7 @@ article li {
 }
 
 .providers,
+.knowledge,
 .pricing {
   background: var(--band-alt);
 }
@@ -677,7 +682,7 @@ article li {
 .provider-cards {
   display: grid;
   gap: 18px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 36px;
 }
 
@@ -698,6 +703,12 @@ article li {
     var(--surface);
 }
 
+.provider-card.live {
+  background:
+    linear-gradient(145deg, rgba(155, 142, 243, 0.12), transparent 42%),
+    var(--surface);
+}
+
 .provider-title {
   align-items: center;
   display: flex;
@@ -715,6 +726,11 @@ article li {
 .provider-card.cloud .provider-title span {
   background: var(--gold);
   box-shadow: 0 0 0 7px rgba(242, 198, 107, 0.14);
+}
+
+.provider-card.live .provider-title span {
+  background: var(--violet);
+  box-shadow: 0 0 0 7px rgba(155, 142, 243, 0.14);
 }
 
 .provider-title h3 {
@@ -947,6 +963,7 @@ footer p {
 
   .feature-grid.two,
   .feature-grid.three,
+  .feature-grid.four,
   .provider-cards,
   .price-grid {
     grid-template-columns: 1fr;
